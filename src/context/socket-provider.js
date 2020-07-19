@@ -3,11 +3,11 @@ import io from 'socket.io-client'
 
 export const SocketContext = createContext(null)
 
-export default function SocketProvider({ children, url, opt = {} }) {
+export default function SocketProvider({ children, namespace, opt = {} }) {
   const socketRef = useRef(null)
 
   if (socketRef.current == null) {
-    socketRef.current = io(url, {
+    socketRef.current = io(namespace, {
       autoConnect: true,
       transports: ["websocket"],
       ...opt

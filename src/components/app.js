@@ -5,7 +5,7 @@ import SocketProvider from '../context/socket-provider'
 
 export default function App() {
   return (
-    <SocketProvider url="/">
+    <SocketProvider namespace="/">
       <ChatPage />
     </SocketProvider>
   )
