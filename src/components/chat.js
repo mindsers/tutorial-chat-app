@@ -5,7 +5,7 @@ import useSocketEvent from "../hooks/use-socket-event";
 import ConversationView from "./conversation-view";
 import UserToolbar from "./user-toolbar";
 
-export default function ChatPage() {
+export default function Chat() {
   const [username, setUsername] = useState(null);
   const { emit: joinChat } = useSocketEvent('joinChat')
 
