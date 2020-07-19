@@ -6,16 +6,16 @@ export default server => {
   const io = socketIO(server);
 
   io.on("connection", socket => {
-    socket.on("chat-enter", username => {
+    socket.on("joinChat", username => {
       usernames.set(socket.id, username);
 
-      socket.broadcast.emit("message", {
+      socket.broadcast.emit("newMessage", {
         type: "system",
         text: `${username} just joined the chat`
       });
     });
-    socket.on("new-message", text => {
-      io.sockets.emit("message", {
+    socket.on("newMessage", text => {
+      io.sockets.emit("newMessage", {
         type: "message",
         username: usernames.get(socket.id),
         timestamp: Date.now(),

@@ -1,6 +1,6 @@
 import React from "react";
 import { hydrate } from "react-dom";
 
-import ChatPage from "./components/chat";
+import App from "./components/app";
 
-hydrate(<ChatPage />, document.querySelector("#react-app"));
+hydrate(<App />, document.querySelector("#react-app"));

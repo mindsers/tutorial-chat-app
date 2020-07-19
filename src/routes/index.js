@@ -1,13 +1,12 @@
 import express from "express";
 import { renderToString } from "react-dom/server";
 import React from "react";
-import ChatPage from "../components/chat";
+import App from "../components/app";
 
 const router = express.Router();
 
-/* GET home page. */
 router.get("*", async function(req, res, next) {
-  const reactApp = renderToString(<ChatPage />);
+  const reactApp = renderToString(<App />);
   res.render("index", { reactApp });
 });
 
