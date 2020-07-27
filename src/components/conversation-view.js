@@ -12,7 +12,7 @@ export default function ConversationView({ viewer }) {
       return
     }
 
-    setMessages(prevValue => [...prevValue, data])
+    setMessages(prevValue => [data, ...prevValue])
   })
 
   return (

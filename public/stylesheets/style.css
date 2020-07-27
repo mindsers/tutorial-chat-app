@@ -7,7 +7,7 @@
 
 .discussion {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   list-style: none;
   height: calc(100% - 60px);
   margin: 0;
