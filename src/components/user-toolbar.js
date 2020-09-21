@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
+
 import useSocketEvent from '../hooks/use-socket-event';
 
 export default function UserToolbar() {
+  const { room } = useParams()
   const [text, setText] = useState("");
   const { emit: sendMessage } = useSocketEvent('newMessage')
 
@@ -10,7 +13,7 @@ export default function UserToolbar() {
       onSubmit={event => {
         event.preventDefault();
 
-        sendMessage(text);
+        sendMessage(text, room);
         setText("");
       }}
     >

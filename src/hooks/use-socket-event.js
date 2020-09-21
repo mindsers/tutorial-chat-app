@@ -27,10 +27,10 @@ export default function useSocketEvent(eventName) {
     }
   }
 
-  const emiter = (data) => {
+  const emiter = (...data) => {
     if (eventName == null) return
 
-    socket.binary(false).emit(eventName, data)
+    socket.binary(false).emit(eventName, ...data)
   }
 
   return {
