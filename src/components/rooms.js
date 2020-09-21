@@ -1,8 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import SocketProvider from '../context/socket-provider'
-
 import Chat from './chat'
 
 export default function Rooms() {
