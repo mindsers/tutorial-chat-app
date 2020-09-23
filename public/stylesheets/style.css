@@ -105,3 +105,31 @@
   border-width: 0;
   margin: 10px;
 }
+
+.Home .title {
+  text-align: center;
+}
+
+.Home .content {
+  text-align: center;
+}
+
+.Home .content input {
+  padding: 5px;
+  margin: 13.5px 0;
+  font-size: 1.1em;
+  border: 1px dashed #bbb;
+  border-radius: 3px;
+  color: #bbb;
+  outline: none;
+}
+
+.Home .content a {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: aliceblue;
+  text-decoration: none;
+  margin: 5px;
+}
